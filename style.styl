@@ -1,0 +1,189 @@
+font(font-size=20px,line-height=30px,font-weight=400)
+	font-family 'filson-pro'
+	font-size font-size
+	line-height line-height
+	font-weight font-weight
+
+blue = #253E84
+lightblue = #92ECFF
+grey = #F0F0F0
+*
+	margin 0
+	padding 0
+	box-sizing border-box
+
+body 
+	color black
+	
+.menu
+	text-align center
+	position fixed
+	height 70px
+	width 100%
+	background-color blue
+	z-index 100
+	top 0px
+	box-shadow 0px 0px 3px 1px rgba(0,0,0,0.3)
+	img
+		margin-top 10px
+		height 50px
+		
+.header
+	position relative
+	background-image url('/images/header.jpg')
+	height 80vh
+	background-repeat no-repeat
+	background-position top center
+	background-size cover
+	width 100%
+	display flex
+	align-items flex-end	
+	justify-content center
+	margin-top 70px
+	box-shadow inset -20px -150px 100px 0px rgba(0,0,0,0.5)
+
+.content-wrapper
+	margin 40px 20px
+	font()
+
+.content
+	margin 20px
+	
+.header-title
+	width 100%
+	max-width 1100px
+	position relative
+	color white
+	padding 0px 20px	
+	margin 60px 0px
+	h1
+		font(50px,60px,700)
+	h2
+		font(25px,,400)
+		margin 10px 0px
+	
+#meeting-information
+	min-width 300px
+	flex 1
+	position relative
+	background-color grey
+	margin-top -130px
+	font(16px,24px)
+	height 100%
+	p
+		padding 0px 20px
+		margin 0px
+		
+	h3 
+		margin 0px
+		padding 20px 20px 0px
+		&:first-of-type
+			background-color blue
+			padding 20px
+			color white
+			height 90px	
+	
+#introduction
+	flex 3
+	font-size 25px
+	font(28px,38px)
+	margin-right 50px
+
+#main-text
+	flex 3
+
+#contact-information
+	flex 1
+	min-width 300px
+	
+.flex-wrapper
+	width 100%
+	max-width 1100px
+	margin auto
+	position relative
+	display flex
+		
+.button
+	height 80px
+	width calc(100% - 40px)
+	color blue
+	background-color lightblue
+	border 2px solid blue
+	font(18px)
+	margin 30px 20px 20px
+	transition all 0.3s
+	cursor pointer
+	//box-shadow inset 0px 40px 0px 0px rgba(255,255,255,0.3)	
+	&:hover
+		background-color blue
+		color white
+
+#youtube-button
+	margin-top 0px
+	background-color white
+	&:hover
+		background-color blue
+
+.content
+	h3
+		margin 40px 0px 20px
+	p
+		margin 20px 0px
+		img
+			width 250px		
+			margin 50px auto
+		
+
+
+@media only screen and (max-width:900px)
+	.flex-wrapper
+		display block
+		
+	#meeting-information
+		min-width auto
+		
+	.content-wrapper
+		margin 40px 0px
+		min-width auto
+	
+	#introduction
+		margin-top 30px
+		margin-right 20px
+		
+	.content
+		h3
+			margin-top 40px		
+	
+	#meeting-information
+		width calc(100% - 40px)
+		margin-top 40px
+		h3
+			&:first-of-type
+				height 65px
+		
+	.header-title
+		h1
+			br
+				display none
+				
+@media only screen and (max-width:650px)
+	.content-wrapper
+		margin-top 0px
+		
+	.header-title
+		margin 30px 0px
+		h1
+			font(36px,45px,bold)
+	.header
+		background-size cover
+				
+	#introduction
+		font(18px,24px)
+	
+	.content
+		font(18px,24px)
+		
+	#meeting-information
+		h3
+			&:first-of-type
+				height 85px
