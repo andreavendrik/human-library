@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #000;
+}
+.menu {
+  text-align: center;
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  background-color: #253e84;
+  z-index: 100;
+  top: 0px;
+}
+.menu img {
+  margin-top: 10px;
+  height: 50px;
+}
+.header {
+  position: relative;
+  background-image: url("/images/header.jpg");
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 70px;
+  box-shadow: inset -20px -150px 100px 0px rgba(0,0,0,0.5);
+}
+.content-wrapper {
+  margin: 40px 20px;
+  font-family: 'filson-pro', Helvetica;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+}
+.content {
+  margin: 20px;
+}
+.header-title {
+  width: 100%;
+  max-width: 1100px;
+  position: relative;
+  color: #fff;
+  padding: 0px 20px;
+  margin: 60px 0px;
+}
+.header-title h1 {
+  font-family: 'filson-pro', Helvetica;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 700;
+}
+.header-title h2 {
+  font-family: 'filson-pro', Helvetica;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 400;
+  margin: 10px 0px;
+}
+#meeting-information {
+  min-width: 300px;
+  flex: 1;
+  position: relative;
+  background-color: #f0f0f0;
+  margin-top: -130px;
+  font-family: 'filson-pro', Helvetica;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  height: 100%;
+}
+#meeting-information p {
+  padding: 0px 20px;
+  margin: 0px;
+}
+#meeting-information h3 {
+  margin: 0px;
+  padding: 20px 20px 0px;
+}
+#meeting-information h3:first-of-type {
+  background-color: #253e84;
+  padding: 20px;
+  color: #fff;
+  height: 90px;
+}
+#introduction {
+  flex: 3;
+  font-size: 25px;
+  font-family: 'filson-pro', Helvetica;
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 400;
+  margin-right: 50px;
+}
+#main-text {
+  flex: 3;
+}
+#contact-information {
+  flex: 1;
+  min-width: 300px;
+}
+.flex-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+  display: flex;
+}
+.button {
+  height: 75px;
+  width: calc(100% - 40px);
+  color: #fff;
+  background-color: #253e84;
+  border: 2px solid #253e84;
+  font-family: 'filson-pro', Helvetica;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  margin: 30px 20px 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: inset 0px -8px 0px 0px rgba(0,0,0,0.5);
+}
+.button:hover {
+  background-color: #92ecff;
+  color: #253e84;
+}
+#youtube-button {
+  margin-top: 0px;
+  background-color: #fff;
+  color: #253e84;
+}
+#youtube-button:hover {
+  color: #253e84;
+  background-color: #92ecff;
+}
+.content h3 {
+  margin: 40px 0px 20px;
+}
+.content p {
+  margin: 20px 0px;
+}
+.content p img {
+  width: 250px;
+  margin: 50px auto;
+}
+@media only screen and (max-width: 900px) {
+  .flex-wrapper {
+    display: block;
+  }
+  #meeting-information {
+    min-width: auto;
+  }
+  .content-wrapper {
+    margin: 40px 0px;
+    min-width: auto;
+  }
+  #introduction {
+    margin-top: 30px;
+    margin-right: 20px;
+  }
+  .content h3 {
+    margin-top: 40px;
+  }
+  #meeting-information {
+    width: calc(100% - 40px);
+    margin-top: 40px;
+  }
+  #meeting-information h3:first-of-type {
+    height: 65px;
+  }
+  .header-title h1 br {
+    display: none;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .content-wrapper {
+    margin-top: 0px;
+  }
+  .header-title {
+    margin: 30px 0px;
+  }
+  .header-title h1 {
+    font-family: 'filson-pro', Helvetica;
+    font-size: 36px;
+    line-height: 45px;
+    font-weight: bold;
+  }
+  .header {
+    background-size: cover;
+  }
+  #introduction {
+    font-family: 'filson-pro', Helvetica;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .content {
+    font-family: 'filson-pro', Helvetica;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  #meeting-information h3:first-of-type {
+    height: 85px;
+  }
+}
