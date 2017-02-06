@@ -46,8 +46,8 @@ function buildForDevelopment() {
         .pipe(plumber())
         .pipe(stylus({use: [
             urlprefix({
-                imagePrefix: 'http://localhost:8080/',
-                fontPrefix: 'http://localhost:8080/'
+                imagePrefix: 'http://www.thehumanlibrary.nl/',
+                fontPrefix: 'http://www.thehumanlibrary.nl/'
             })]
         }))
         .pipe(plumber.stop())
