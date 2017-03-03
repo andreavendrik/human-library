@@ -25,8 +25,8 @@ orange = #E0643F
 	box-sizing border-box
 
 h1
-	heading(70px,80px,500)
-		
+	heading(75px,84px,500)
+	
 h2
 	font(25px,,500)
 	margin 10px 0px
@@ -54,20 +54,18 @@ p
 	justify-content flex-start
 	z-index 100
 	top 0px
-	//border-bottom 2px solid white
 	box-shadow 0px 0px 3px 1px rgba(0,0,0,0.3)
 	img
-		height 50px
+		height 45px
 .menu
-	max-width 1040px
+	max-width 1120px
 	padding 0px 20px
 	width 100%
 	margin auto
 	 
 .header
 	position relative
-	background-image url('images/header.jpg')
-	height 80vh
+	height 85vh
 	background-repeat no-repeat
 	background-position center center
 	background-size cover
@@ -79,57 +77,48 @@ p
 	box-shadow inset -20px -150px 100px 0px rgba(0,0,0,0.5)
 
 .content-wrapper
-		font()
+	font()
 		
 .header-title
 	width 100%
-	max-width 1040px
+	max-width 1120px
 	position relative
 	padding 0px 20px    
 	margin 60px 0px
 	h1
-			heading(90px,100px,500)
-			color white!important	
+		heading(85px,100px,500)
+		color white!important	
 	h2
-			color white!important
+		color white!important
 
 .introduction
-		flex 3
-		margin-right 50px
-		width 100%
-		max-width 900px
-		margin auto    
-		padding 20px
-		p
-			margin 15px 0px 50px
-			&:first-of-type
-				font(30px,43px,600)
-				margin-top 50px
-#main-text
-		flex 3
-
-#contact-information
-		flex 1
-		min-width 300px
-		max-width 300px    
+	width 100%
+	max-width 800px
+	margin auto    
+	padding 20px
+	p
+		margin 15px 0px 50px
+		&:first-of-type
+			font(30px,43px,600)
+			margin-top 50px
 		
 .events
-		width 100%
-		max-width 1080px
-		margin auto
-		position relative
-		display flex
-		justify-content space-between
+	width 100%
+	max-width 1080px
+	margin auto
+	position relative
+	display flex
+	justify-content space-between
 		
 .events-wrapper
-		background-color grey
-		padding 20px
+	background-color grey
+	padding 20px 20px 40px
 
 .pictures
 	padding 20px
 	
 .content-block
-	width calc(33% - 10px)
+	width 32%
 	background-color green
 	border-radius 5px
 	margin 20px 0px
@@ -175,24 +164,38 @@ p
 		background-color lightblue
 		color blue  
 
+#button-filmpje
+	width 200px
+	background-color transparent
+	border 2px solid white
+	&:hover
+		background-color green
+		
 .footer
 	margin auto
 	display flex
 	justify-content center
 	width 100%
-	background-color grey
+	background-color lightblue
+	padding 50px
 	p
 		font(14px,21px)
 	h4
 		font-weight 700
 	div
-		padding 20px
-		max-width 300px
+		padding-right 30px
+		max-width 350px
 		img
 			max-width 100px
 			max-height 70px
 			margin 15px
 
+.caption-wrap
+	background-color lightgrey!important
+	color black!important
+	opacity 1!important
+	padding 10px!important
+	
 #footer-logos
 	max-width 700px
 	p
@@ -213,10 +216,11 @@ p
 				height 40px
 				
 		h1
-			heading(50px,60px,500)
+			heading(50px,50px,500)
 		
 		.heading
 			padding-top 30px 
+			
 		.events
 				display block
 				
@@ -228,22 +232,24 @@ p
 				min-width auto
 		
 		.introduction
-				margin-top 0px
-				margin-right 20px
-				h3
-					font(16px,21px)
+			margin-top 0px
+			margin-right 20px
+			margin-bottom 60px
+			h3
+				font(16px,21px)
+				margin-top 10px
+			p
+				font(16px,24px)
+				margin-bottom 25px
+				&:first-of-type
+					font-size 21px
+					line-height 29px
 					margin-top 10px
-				p
-					font(16px,24px)
-					margin-bottom 25px
-					&:first-of-type
-						font-size 21px
-						line-height 29px
-						margin-top 10px
 		
 		.header-title
+			margin 30px 0px
 			h1
-				heading(58px,65px,500)
+				heading(50px,55px,500)
 				
 		.carousel
 			width 100%!important
@@ -262,8 +268,3 @@ p
 			p
 				flex-direction column
 				
-		.header-title
-			h1
-					br
-						display none
-								
