@@ -1,67 +1,113 @@
-<?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
+<?php /**Template Name: Home Page
 
-get_header(); ?>
+* @package WordPress
+* @subpackage Twenty_Seventeen
 
-<div class="wrap">
-	<?php if ( is_home() && ! is_front_page() ) : ?>
-		<header class="page-header">
-			<h1 class="page-title"><?php single_post_title(); ?></h1>
-		</header>
-	<?php else : ?>
-	<header class="page-header">
-		<h2 class="page-title"><?php _e( 'Posts', 'twentyseventeen' ); ?></h2>
+*/
+
+get_header();
+global $post;
+$post = get_page(13);
+?>
+
+
+	<nav class="menu-wrapper">
+		<div class="menu">
+			<img src="<?php echo get_bloginfo('siteurl'); ?>/wp-content/themes/twentyseventeen/images/logo.svg" border=0>
+		</div>
+	</nav>
+	 
+	<header class="header" style="background-image:url('<?php the_field( 'header_foto' ); ?>')">
+		<div class="header-title">
+			<a
+				class="button" id="button-filmpje"
+				href="https://www.youtube.com/watch?v=AG0YhgIWWn4&feature=youtu.be" target="_blank"
+				>Bekijk het filmpje</a>
+			<h1><?php the_field( 'header_tekst' ); ?></h1>				
+		</div>
 	</header>
-	<?php endif; ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<main class="content-wrapper">
 
-			<?php
-			if ( have_posts() ) :
+		<section class="introduction">
+			<?php the_field( 'introductie' ); ?>
+		</section>
 
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
+		<section class="events-wrapper">
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/post/content', get_post_format() );
+		<h1 class="heading">Eerstvolgende edities</h1>
 
-				endwhile;
+		<div class="events">
+			<div class="content-block">
+				<div class="content-block-image" style="background-image:url('<?php the_field( 'evenement_1_foto' ); ?>')"></div>
+				<div class="content-block-text">
+					<h4>Datum</h4>
+					<p><?php the_field( 'evenement_1_datum' ); ?></p>
+					<h4>Tijd</h4>
+					<p><?php the_field( 'evenement_1_tijd' ); ?></p>
+					<h4>Locatie</h4>
+					<p><?php the_field( 'evenement_1_locatie' ); ?></p>
 
-				the_posts_pagination( array(
-					'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
-				) );
+					<?php if( get_field('evenement_1_geweest') ): ?>
+						<p id="evenement_geweest">Dit evenement heeft reeds plaatsgevonden</p>
+					<?php endif; ?>
+					<a
+						class="button"
+						href="<?php the_field( 'evenement_1_facebook_link' ); ?>" target="_blank"
+					>Meld je aan op Facebook</a>
+				</div>
+			</div>
 
-			else :
+			<div class="content-block">
+				<div class="content-block-image" style="background-image:url('<?php the_field( 'evenement_2_foto' ); ?>')"></div>
+				<div class="content-block-text">
+					<h4>Datum</h4>
+					<p><?php the_field( 'evenement_2_datum' ); ?></p>
+					<h4>Tijd</h4>
+					<p><?php the_field( 'evenement_2_tijd' ); ?></p>
+					<h4>Locatie</h4>
+					<p><?php the_field( 'evenement_2_locatie' ); ?></p>
 
-				get_template_part( 'template-parts/post/content', 'none' );
+					<?php if( get_field('evenement_2_geweest') ): ?>
+						<p id="evenement_geweest">Dit evenement heeft reeds plaatsgevonden</p>
+					<?php endif; ?>
+					<a
+						class="button"
+						href="<?php the_field( 'evenement_2_facebook_link' ); ?>" target="_blank"
+					>Meld je aan op Facebook</a>
+				</div>
+			</div>
 
-			endif;
-			?>
+			<div class="content-block">
+				<div class="content-block-image" style="background-image:url('<?php the_field( 'evenement_3_foto' ); ?>')"></div>
+				<div class="content-block-text">
+					<h4>Datum</h4>
+					<p><?php the_field( 'evenement_3_datum' ); ?></p>
+					<h4>Tijd</h4>
+					<p><?php the_field( 'evenement_3_tijd' ); ?></p>
+					<h4>Locatie</h4>
+					<p><?php the_field( 'evenement_3_locatie' ); ?></p>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
-</div><!-- .wrap -->
+					<?php if( get_field('evenement_3_geweest') ): ?>
+						<p id="evenement_geweest">Dit evenement heeft reeds plaatsgevonden</p>
+					<?php endif; ?>
+					<a
+						class="button"
+						href="<?php the_field( 'evenement_3_facebook_link' ); ?>" target="_blank"
+					>Meld je aan op Facebook</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="pictures">
+		<h1 class="heading">Sfeerimpressie</h1>
+		<?php the_field( 'carousel_code' ); ?>
+	</section>
+
+	<section class="photo-slider">
+	</section>
+
+</main>
 
 <?php get_footer();
