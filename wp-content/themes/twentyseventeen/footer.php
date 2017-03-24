@@ -23,14 +23,15 @@
 					<h4>De Human Library wordt mede mogelijk gemaakt door</h4>
 					<p>
 						<img src="<?php echo get_bloginfo('siteurl'); ?>/wp-content/themes/twentyseventeen/images/europ-logo-zwart.png" border=0>
+						<img src="<?php echo get_bloginfo('siteurl'); ?>/wp-content/themes/twentyseventeen/images/euflag.png" border=0>
 						<img src="<?php echo get_bloginfo('siteurl'); ?>/wp-content/themes/twentyseventeen/images/hl-logo-zwart.png" border=0>
-						<img src="<?php echo get_bloginfo('siteurl'); ?>/wp-content/themes/twentyseventeen/images/eu-logo-zwart.png" border=0>
+						<img src="<?php echo get_bloginfo('siteurl'); ?>/wp-content/themes/twentyseventeen/images/jub-logo.jpg" border=0>
 					</p>
 				</div>
 				<div>
 					<h4>Contact</h4>
 					<p>
-						Heb je een vraag over de Human Library, mail Lot Feijen op lot@en-maes.nl.
+						Heb je een vraag over de Human Library, mail Jorn Matena op <a href="mailto:jorn@en-maes.nl">jorn@en-maes.nl</a>.
 					</p>
 				</div>
 

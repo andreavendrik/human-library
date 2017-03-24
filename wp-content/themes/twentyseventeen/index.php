@@ -51,10 +51,12 @@ $post = get_page(13);
 					<?php if( get_field('evenement_1_geweest') ): ?>
 						<p id="evenement_geweest">Dit evenement heeft reeds plaatsgevonden</p>
 					<?php endif; ?>
-					<a
-						class="button"
-						href="<?php the_field( 'evenement_1_facebook_link' ); ?>" target="_blank"
-					>Meld je aan op Facebook</a>
+					<?php if( get_field('event_1_facebook_link') ): ?>
+						<a
+							class="button"
+							href="<?php the_field( 'event_1_facebook_link' ); ?>" target="_blank"
+						>Meld je aan op Facebook</a>
+					<?php endif; ?>
 				</div>
 			</div>
 
@@ -71,10 +73,12 @@ $post = get_page(13);
 					<?php if( get_field('evenement_2_geweest') ): ?>
 						<p id="evenement_geweest">Dit evenement heeft reeds plaatsgevonden</p>
 					<?php endif; ?>
-					<a
-						class="button"
-						href="<?php the_field( 'evenement_2_facebook_link' ); ?>" target="_blank"
-					>Meld je aan op Facebook</a>
+					<?php if( get_field('event_2_facebook_link') ): ?>
+						<a
+							class="button"
+							href="<?php the_field( 'event_2_facebook_link' ); ?>" target="_blank"
+						>Meld je aan op Facebook</a>
+					<?php endif; ?>
 				</div>
 			</div>
 
@@ -91,10 +95,12 @@ $post = get_page(13);
 					<?php if( get_field('evenement_3_geweest') ): ?>
 						<p id="evenement_geweest">Dit evenement heeft reeds plaatsgevonden</p>
 					<?php endif; ?>
-					<a
-						class="button"
-						href="<?php the_field( 'evenement_3_facebook_link' ); ?>" target="_blank"
-					>Meld je aan op Facebook</a>
+					<?php if( get_field('event_3_facebook_link') ): ?>
+						<a
+							class="button"
+							href="<?php the_field( 'event_3_facebook_link' ); ?>" target="_blank"
+						>Meld je aan op Facebook</a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
